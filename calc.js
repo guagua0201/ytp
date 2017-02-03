@@ -1,5 +1,5 @@
 var csv = ".txt";
-var datapath = ""; // 股票的data位址
+var datapath = "https://cocoflyliu.github.io/stock_crawler/data/"; // 股票的data位址
 // 學長的參考path 是 https://cocoflyliu.github.io/stock_crawler/data/
 // getelementbyid 在每個js都有出現 暫時預設是從資料庫append東西的可用函數
 
