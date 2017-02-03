@@ -7,19 +7,20 @@ var datapath = "https://cocoflyliu.github.io/stock_crawler/data/"; // 股票的d
 // fx 是第 x 個類別的來源 ， groupx 是裏頭的資料
 // form 1~4 是暫且沿用學長的變數名稱 要依據隊友寫了甚麼改
 
-var f1 = document.getElementById("form1") //**
-var f2 = document.getElementById("form2")
-var f3 = document.getElementById("form3")
-var f4 = document.getElementById("form4")
+var f1 = document.getElementById("form1");
+var f2 = document.getElementById("form2");
+var f3 = document.getElementById("form3");
+var f4 = document.getElementById("form4");
 
 
-var group1 = {target:f1.target1.value, comparison:f1.comparison1.value , data:f1.text1.value, searchable:f1.checkValidity()}
-var group2 = {target:f2.target2.value, comparison:f2.comparison2.value , data:f2.text2.value, searchable:f2.checkValidity()}
-var group3 = {target:f3.target3.value, comparison:f3.comparison3.value , data:f3.text3.value, searchable:f3.checkValidity()}
-var group4 = {target:f4.target4.value, comparison:f4.comparison4.value , data:f4.text4.value, searchable:f4.checkValidity()}
+/*
+var group1 = {target:f1.target1.value, comparison:f1.comparison1.value , data:f1.text1.value, searchable:f1.checkValidity()};
+var group2 = {target:f2.target2.value, comparison:f2.comparison2.value , data:f2.text2.value, searchable:f2.checkValidity()};
+var group3 = {target:f3.target3.value, comparison:f3.comparison3.value , data:f3.text3.value, searchable:f3.checkValidity()};
+var group4 = {target:f4.target4.value, comparison:f4.comparison4.value , data:f4.text4.value, searchable:f4.checkValidity()};
+*/
 
-
-document.getElementById("form1").target1.option // 這行的功用存在疑問
+document.getElementById("form1").target1.option 
 
  var ans1 = []
  var ans2 = []
@@ -70,5 +71,10 @@ function clear2(){
 	ans.appendChild(tmp);	
 }
 function search(){
-	alert(group1);
+	var orgForm = document.getElementById("target1").value;
+	var output = document.write(orgForm);
+	alert(orgForm);
+	var file = "https://cocoflyliu.github.io/stock_crawler/data/DY-js.csv";
+	d3.csv(file, function(data) {
+    console.log(data);});
 }
