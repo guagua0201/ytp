@@ -72,7 +72,7 @@ function clear2(){
 }
 function search(){
 	var orgForm = document.getElementById("target1").value;
-	var output = document.write(orgForm);
+	var output = document.getElementById("text1").write(orgForm);
 	alert(orgForm);
 	var file = "https://cocoflyliu.github.io/stock_crawler/data/DY-js.csv";
 	d3.csv(file, function(data) {
